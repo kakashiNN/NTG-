@@ -26,4 +26,7 @@ app.get("/download", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("NIROB API RUNNING 😞✅"));
+// ✅ Render এ অবশ্যই process.env.PORT ব্যবহার করতে হবে
+app.listen(process.env.PORT || 3000, () => {
+  console.log("✅ Server running...");
+});
